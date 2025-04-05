@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: century gothic;
+    border-radius: 20px;
+}
+body{
+	background-image:url(img/BoutiqueLogo.jpg);
+	background-size: cover; 
+}
+header{
+    width: 80%;
+    box-shadow: 3px 3px 3px 3px gray ;
+    margin: 40px auto 40px auto;
+}
+header h1{
+    padding: 30px;
+    font-size: 40px;
+	font-family: "Times New Roman", Times, serif;
+}
+header ul {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    width: 100%;
+    background-color: #c7ba95;
+    margin: auto;
+    list-style-type: none;
+}
+header a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 15px 0 15px 0;
+}
+header a:hover{
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 15px 0 15px 0;
+    background-color: #4a4842;
+}
+.menu-horizontal{
+	list-style: none;
+	display: flex;
+	justify-content: space-around;
+}
+.menu-vertical{
+	position: absolute;
+	display: none;
+	list-style: none;
+	width: 200px;
+	background-color: rgba(0, 0, 0, .5);
+}
+.menu-horizontal li:hover .menu-vertical{
+	display: block;
+}
+.menu-vertical li:hover{
+	background-color: black;
+}
+main{
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+main img {
+    width: 270px;
+    height: 270px;
+    object-fit: cover;
+}
+main img:hover {
+    transform: scale(1.2);
+	transition: 2s;
+	
+}
+main div {
+    margin-top: 30px;
+}
+
+footer{
+    margin-top: 50px;
+    background-color: #b8b19e;
+    border-radius: 0;
+}
+footer p{
+    padding: 100px;
+}
+
+@media (max-width:600px){
+    header ul {
+        display: grid;
+        grid-template-columns: auto;
+        width: 100%;
+        background-color: #c7ba95;
+        margin: auto;
+        list-style-type: none;
+    }
+    main{
+        width: 80%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: auto;
+    }
+}
+
+
+@media (min-width:601px) and (max-width:1024px){
+    header ul {
+        display: grid;
+        grid-template-columns: auto;
+        width: 100%;
+        background-color: #c7ba95;
+        margin: auto;
+        list-style-type: none;
+    }
+    main{
+        width: 80%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+}
+@media (min-width: 900px) {
+  .grid-container {
+    grid-template:
+      "header  header header"  100px
+      "navbar  main   sidebar" auto
+      "footer  footer footer"  100px /
+      200px    auto   200px;
+  }
+}
+
